@@ -8,4 +8,4 @@ En este repositorio se encontrarán todos los recursos vistos en el Club de prog
 
 Estos son los temas que se espera que veamos a lo largo del semestre
 
-<img src="https://drive.google.com/uc?export=view&id=1NoRkysJ_o18qeXSQbAbXASfuJ9ylXw8K" width="500">
+![Univesidad Icesi](https://drive.google.com/uc?export=view&id=1NoRkysJ_o18qeXSQbAbXASfuJ9ylXw8K)
