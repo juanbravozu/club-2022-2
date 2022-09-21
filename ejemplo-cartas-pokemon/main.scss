@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+@function rem($pxValue) {
+  @return #{calc($pxValue / 16)}rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  min-height: 100vh;
+  perspective: 600px;
+}
+
+.card {
+  $self: &;
+
+  height: 450px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 400ms ease-out;
+  width: 300px;
+
+  &__face {
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.15);
+    color: white;
+    height: 100%;
+    padding: 15px;
+    position: absolute;
+    width: 100%;
+    background-color: var(--base-color);
+
+    &--front {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &__img {
+    background-color: var(--light-color);
+    border-radius: 10px;
+    margin: 25px 0;
+    padding: 10px;
+    width: 200px;
+  }
+
+  &__title {
+    font-size: rem(24);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  &__stat p {
+    text-align: center;
+    font-size: rem(14);
+    font-weight: 400;
+    letter-spacing: rem(1.8);
+  }
+
+  & #{$self}__stat-value {
+    font-size: rem(20);
+    font-weight: 300;
+  }
+
+  &--flipped {
+    transform: rotateY(180deg);
+  }
+
+  &--green {
+    --base-color: hsl(170deg 80% 40%);
+    --light-color: hsl(150deg 90% 50% / 0.35);
+  }
+  
+  &--red {
+    --base-color: hsl(15deg 100% 60%);
+    --light-color: hsl(40deg 95% 60% / 0.45); 
+  }
+}

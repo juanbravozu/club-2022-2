@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  min-height: 100vh;
+  perspective: 600px;
+}
+
+.card {
+  height: 450px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 400ms ease-out;
+  width: 300px;
+}
+.card__face {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 15px;
+  box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.15);
+  color: white;
+  height: 100%;
+  padding: 15px;
+  position: absolute;
+  width: 100%;
+  background-color: var(--base-color);
+}
+.card__face--front {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.card__face--back {
+  transform: rotateY(180deg);
+}
+.card__img {
+  background-color: var(--light-color);
+  border-radius: 10px;
+  margin: 25px 0;
+  padding: 10px;
+  width: 200px;
+}
+.card__title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.card__stats-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  width: 100%;
+}
+.card__stat p {
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.1125rem;
+}
+.card .card__stat-value {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.card--flipped {
+  transform: rotateY(180deg);
+}
+.card--green {
+  --base-color: hsl(170deg 80% 40%);
+  --light-color: hsl(150deg 90% 50% / 0.35);
+}
+.card--red {
+  --base-color: hsl(15deg 100% 60%);
+  --light-color: hsl(40deg 95% 60% / 0.45);
+}/*# sourceMappingURL=main.css.map */
