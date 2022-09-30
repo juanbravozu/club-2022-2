@@ -41,7 +41,6 @@ async function getPokemonData() {
     //Organizamos los datos y creamos las cartas
     pokesData.forEach((data, index) => {
       const parsed = parsePokemonData(data, speciesData[index], pokesEvolData[index]);
-      console.log(parsed);
       const card = new Card(parsed, cardsContainer);
       card.addEvent('click', toggleFlippedClass);
       card.bindEvents();
@@ -76,7 +75,6 @@ function parsePokemonData(pokeData, speciesData, evolData) {
     }
   } = pokeData;
 
-  console.log(speciesData);
   const {
     flavor_text_entries,
     color
