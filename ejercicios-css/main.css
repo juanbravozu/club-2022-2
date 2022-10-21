@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+}
+
+.box-one {
+  background-color: salmon;
+}
+
+.box-two {
+  background-color: cornflowerblue;
+}
+
+div {
+  margin: 20px;
+  padding: 30px;
+  width: 200px;
+}
+
+body {
+  padding: 20px;
+}
