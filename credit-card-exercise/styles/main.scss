@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import './button';
+@import './textfield';
+@import './card';
+
+:root {
+  --light-gray: hsl(270, 3%, 87%);
+  --dark-gray: hsl(279, 6%, 55%);
+  --very-dark-gray: hsl(278, 68%, 11%);
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+
+.form {
+  max-width: 350px;
+  width: 100%;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  
+  &--spacing-s {
+    gap: 8px;
+  }
+}

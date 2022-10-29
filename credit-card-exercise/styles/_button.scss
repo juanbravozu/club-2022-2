@@ -1,0 +1,13 @@
+.button {
+  background-color: var(--very-dark-gray);
+  border-radius: 8px;
+  color: white;
+  display: block;
+  height: 48px;
+  margin-top: 12px;
+  width: 100%;
+
+  &:disabled {
+    background-color: var(--dark-gray);
+  }
+}

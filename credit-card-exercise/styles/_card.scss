@@ -1,0 +1,52 @@
+.card {
+  background-color: aqua;
+  border-radius: 12px;
+  height: 245px;
+  position: relative;
+  transform: perspective(600px);
+  transform-style: preserve-3d;
+  transition: transform 400ms ease-out;
+  width: 450px;
+
+  &__face {
+    backface-visibility: hidden;
+    height: inherit;
+    padding: 24px;
+    position: absolute;
+    width: inherit;
+
+    &--front {
+      background-image: url(/bg-card-front.png);
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    &--back {
+      background-color: var(--light-gray);
+      transform: rotateY(180deg);
+    }
+  }
+
+  &__text {
+    color: white;
+    font-size: 14px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+
+    &--card-number {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  &__text-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &--flipped {
+    transform: perspective(600px) rotateY(180deg);
+  }
+}
