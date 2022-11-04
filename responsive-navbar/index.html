@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Nav Bar</title>
+  </head>
+  <body>
+    <a href="#content" class="skip-nav">Saltar al contenido</a>
+    <header>
+      <nav class="nav">
+        <a href="/" class="nav__link">
+          <img 
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png" 
+            alt="Javascript logo"
+            class="nav__logo">
+        </a>
+
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Item 1</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link">Item 2</a>
+          </li>
+
+          <li class="nav__item nav__item--has-list">
+            <a href="#" class="nav__link">Item 3</a>
+
+            <ul class="nav__dropdown">
+              <li class="nav__item"><a tabindex="-1" class="nav__link" href="#">Subitem 1</a></li>
+              <li class="nav__item"><a tabindex="-1" class="nav__link" href="#">Subitem 2</a></li>
+              <li class="nav__item"><a tabindex="-1" class="nav__link" href="#">Subitem 3</a></li>
+              <li class="nav__item"><a tabindex="-1" class="nav__link" href="#">Subitem 4</a></li>
+              <li class="nav__item"><a tabindex="-1" class="nav__link" href="#">Subitem 5</a></li>
+            </ul>
+          </li>
+
+          <li class="nav__item">
+            <a href="#" class="nav__link">Item 4</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="content">
+      <section>
+        <h1>Titulo principal</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi soluta iusto facere minima expedita laborum consequuntur necessitatibus, perferendis aperiam nesciunt deleniti placeat est repellat sed natus sit voluptatem reprehenderit.</p>
+      </section>
+
+      <section>
+        <h2>Titulo secundario</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem minus eaque quasi, ipsam rem nostrum aliquam esse debitis deleniti fuga, culpa recusandae cum optio dolorum labore doloremque blanditiis ex autem.</p>
+      </section>
+    </main>
+  
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
